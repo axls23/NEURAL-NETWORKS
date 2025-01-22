@@ -87,7 +87,7 @@ def main():
      #  Pass the example input through the model to get the output and final state.
     output, state = model(example_input)
 
-    # 4. Print Output and State Shapes
+    # Print Output and State Shapes
     print("--- Output and State Shapes ---")
     print(f"Output shape: {output.shape} - (batch_size, output_size)")
     print(f"State shape: {state.shape}   - (batch_size, hidden_size)")
@@ -104,7 +104,7 @@ def main():
     model.summary()
     print("---")
 
-    # 7. Plotting Function (Corrected to plot once after forward pass)
+    # Plotting Function (Corrected to plot once after forward pass)
     def plot_rnn_working(inputs, outputs, states):
         """
         Plots the input sequence, RNN output, and RNN state for a single example from the batch.
@@ -121,24 +121,26 @@ def main():
         axs[0].set_title('Input Sequence (Example 1)')
         axs[0].set_xlabel('Time Step')
         axs[0].set_ylabel('Input Value')
-
+        '''
+        
+        '''
         # Plot the RNN outputs for the first example in the batch
         axs[1].plot(outputs[0].numpy())
         axs[1].set_title('RNN Output (Example 1)')
-        axs[1].set_xlabel('Output Dimension Index') # Changed x-label to reflect output vector
-        # output dimention  index repr
+        axs[1].set_xlabel('Output Dimension Index') # x-label  reflects output vector
+        
         axs[1].set_ylabel('Output Value')
 
         # Plot the RNN states for the first example in the batch
         axs[2].plot(states[0].numpy())
         axs[2].set_title('RNN State (Example 1)')
-        axs[2].set_xlabel('State Dimension Index') # Changed x-label to reflect state vector
+        axs[2].set_xlabel('State Dimension Index') #  x-label reflects state vector
         axs[2].set_ylabel('State Value')
 
         plt.tight_layout()
         plt.show()
 
-    # 8. Plot the working of the RNN (after forward pass)
+    # Plot the working of the RNN (after forward pass)
     print("--- Plotting RNN Working ---")
     plot_rnn_working(example_input, output, state)
     print("--- Plotting Completed ---")

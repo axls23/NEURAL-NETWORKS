@@ -30,7 +30,7 @@ This representation allows each input to have its own interaction with hidden la
 **Important Note:** RNN models contain the **same set of parameters** across each iteration or timestamp in the sequence. This parameter sharing across time is a key characteristic of RNNs, enabling them to process sequences of varying lengths while maintaining model efficiency.
 Each  temporal  block can take in  or output  both single atributed and multi atribuite data points  
 
-```
+
 A fundamental characteristic of standard RNNs is that they utilize the **same set of parameters** (weights and biases) across each iteration or timestamp throughout the sequence.
 
 **Benefits of Parameter Sharing:**
@@ -41,4 +41,5 @@ A fundamental characteristic of standard RNNs is that they utilize the **same se
 
 limitation 
 While parameter sharing is powerful, simple RNNs can struggle with capturing very long-range dependencies due to issues like vanishing gradients during training. this  limitation led to the development of more advanced RNN architectures like LSTMs (Long Short-Term Memory) and GRUs (Gated Recurrent Units), which incorporate mechanisms to better handle long-term dependencies while still benefiting from the core idea of recurrent processing and parameter sharing across time.
+```
 

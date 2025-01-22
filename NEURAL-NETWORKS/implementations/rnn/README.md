@@ -1,4 +1,4 @@
-```markdown
+
 ## RNN: RECURRING NEURAL NETWORK
 
 **RECURRING NEURAL NETWORK** is a sequence based model which is unlike other models dependent on multi-dimensions data type.
@@ -41,5 +41,5 @@ A fundamental characteristic of standard RNNs is that they utilize the **same se
 
 limitation 
 While parameter sharing is powerful, simple RNNs can struggle with capturing very long-range dependencies due to issues like vanishing gradients during training. this  limitation led to the development of more advanced RNN architectures like LSTMs (Long Short-Term Memory) and GRUs (Gated Recurrent Units), which incorporate mechanisms to better handle long-term dependencies while still benefiting from the core idea of recurrent processing and parameter sharing across time.
-```
+
 
